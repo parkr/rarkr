@@ -1,4 +1,7 @@
 class World
+  def initialize
+    puts "Initialized."
+  end
 	def self.hello
 		puts "Hello!"
 	end
@@ -18,5 +21,11 @@ World.hello
 # math?
 @hello.multiply(10000000,3.534243)
 # how do I make a constructor for this thing?
-
+puts "def initialize
+  puts 'something great'
+end"
 # nice way to format math returns like in java?
+Currencyformat = "$%.2f"
+puts Currencyformat % 7.5
+pi = 3.14159265
+puts Currencyformat % pi
