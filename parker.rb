@@ -12,8 +12,14 @@ class Parker
   
   def say_hi
     greetings = []
+    start = true
     File.foreach("parker.txt") do |line|
-      greetings.insert(-1, line)
+      if(start)
+        greetings.insert(-1, line)
+      end
+      if(line["MeanGirls"] != nil)
+        start = false
+      end
     end
     @greetings = greetings
     @greeting = greetings[rand(greetings.size)]
